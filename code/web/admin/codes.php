@@ -67,7 +67,7 @@
       var taken = <?php echo json_encode($takenCodes); ?>;
       var codes = document.getElementsByClassName("qr-code");
       for (var i = 0; i < codes.length; qr++) {
-        if (taken.includes(qr)) {
+        if (taken.includes(qr + 1)) {
           continue;
         }
         new QRCode(codes.item(i), {
@@ -80,7 +80,7 @@
       qr = 0;
       var labels = document.getElementsByClassName("qr-label");
       for (var i = 0; i < labels.length; qr++) {
-        if (taken.includes(qr)) {
+        if (taken.includes(qr + 1)) {
           continue;
         }
         labels.item(i).innerHTML = "FalconClean #" + (qr + 1);

@@ -66,7 +66,7 @@
       var qr = 0;
       var taken = <?php echo json_encode($takenCodes); ?>;
       var codes = document.getElementsByClassName("qr-code");
-      for (var i = 0; i < codes.length; qr++) {
+      for (var i = 1; i <= codes.length; qr++) {
         if (taken.includes(qr)) {
           continue;
         }
@@ -79,11 +79,11 @@
 
       qr = 0;
       var labels = document.getElementsByClassName("qr-label");
-      for (var i = 0; i < labels.length; qr++) {
+      for (var i = 1; i <= labels.length; qr++) {
         if (taken.includes(qr)) {
           continue;
         }
-        labels.item(i).innerHTML = "FalconClean #" + (qr + 1);
+        labels.item(i).innerHTML = "FalconClean #" + (qr);
         i++;
       }
     </script>

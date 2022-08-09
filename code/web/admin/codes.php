@@ -71,7 +71,7 @@
           continue;
         }
         new QRCode(codes.item(i), {
-          text: "https://falconclean.net/q?r=" + qr,
+          text: "https://falconclean.app/q?r=" + qr,
           correctLevel: QRCode.CorrectLevel.L
         });
         i++;
